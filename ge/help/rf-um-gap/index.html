@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<title>GAP - Group Explorer 3.0 Help</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../w3.css">
+<link rel="stylesheet" href="../w3-theme-blue.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config( { TeX: { extensions: [ "color.js" ] } } );
+</script>
+<script>
+  // needed by the help scripts
+  var base_url = '..';
+</script>
+  <link href="../w3.css" rel="stylesheet">
+  <link href="../w3-theme-blue.css" rel="stylesheet">
+  <script src="../ge-citations.js" defer></script>
+  <script src="../search/main.js" defer></script>
+<style>
+img { border: 1px solid black; }
+</style>
+<body>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <!--<i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>-->
+  <div class="w3-center">
+  <h1 class="w3-xxxlarge">Group Explorer 3.0 Help: GAP</h1>
+  </div>
+</header>
+
+<hr>
+
+<div class="w3-container">
+    <div class="w3-row w3=border">
+        <div class="w3-quarter w3-container">
+            <div class="w3-padding w3-card w3-bar-block">
+                
+                <br>
+                <form action='search/index.html'>
+                    <input name='q' id='mkdocs-search-query' type='text'
+                           placeholder='Enter search term'
+                           title='Type search term here'/>
+                    <input type='submit' value='Search'
+                           class='w3-btn w3-theme'/>
+                </form>
+                <hr>
+                
+
+                <h3>Contents</h3>
+                <ul>
+                
+                    <li><a style="text-decoration: none;"
+                          href="#gap-groups-algorithms-programming">GAP (Groups, Algorithms, Programming)</a></li>
+                
+                </ul>
+
+                <hr>
+
+                <h3><a style="text-decoration: none;"
+                      href="http://nathancarter.github.io/group-explorer">Group Explorer Home</a></h3>
+
+                <hr>
+
+                <h3>Other help pages</h3>
+                
+                    <ul>
+                    
+                    
+                        <li><a href=".."
+                               style="text-decoration: none;"
+                               class=""
+                               >Main Help Page</a></li>
+                    
+                    
+                    
+                        <li><a href="../welcome/"
+                               style="text-decoration: none;"
+                               class=""
+                               >Welcome</a></li>
+                    
+                    
+                    
+                        <li><a href="../gs-index/"
+                               style="text-decoration: none;"
+                               class=""
+                               >Getting Started</a></li>
+                    
+                    
+                    
+                    
+                    
+                        <li><a href="../tu-index/"
+                               style="text-decoration: none;"
+                               class=""
+                               >Tutorials</a></li>
+                    
+                    
+                    
+                    
+                    
+                        <li><a href="../rf-um-index/"
+                               style="text-decoration: none;"
+                               class=""
+                               >User Manual</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    </ul>
+                
+
+                <hr>
+
+                <h3>Have an idea?</h3>
+                <p><i class="fab fa-github"></i>
+                   <a href='http://github.com/nathancarter/group-explorer/edit/master/help-src/rf-um-gap.md'
+                    >Edit this page</a></p>
+            </div>
+        </div>
+        <div class="w3-threequarter w3-container">
+            <h1 id="gap-groups-algorithms-programming"><em>GAP</em> (Groups, Algorithms, Programming)</h1>
+<p><a href="http://www.gap-system.org"><em>GAP</em></a> is a large and powerful programming
+language for computations in abstract algebra and discrete mathematics.  It
+has been around since the 1980s, and continues to have regular releases
+today.</p>
+<p>Throughout the <em>Group Explorer</em> app, you will find buttons labeled &ldquo;Compute
+this in GAP.&rdquo; Clicking such a button will reveal a box containing <em>GAP</em> code
+that does the computation or visualization you&rsquo;re looking at.  This can be
+useful for several purposes.</p>
+<ol>
+<li>If you want to move beyond <em>Group Explorer</em> to something more powerful,
+    <em>GAP</em> is an excellent next step.  These small samples of <em>GAP</em> code
+    can serve as tiny tutorials, showing you how to do short comptuations
+    in <em>GAP.</em></li>
+<li>If you aren&rsquo;t sure what <em>Group Explorer</em> is reporting, and want to see
+    its results more specifically, the <em>GAP</em> output is sometimes a good
+    place to start.  It may contain more technical details than <em>Group
+    Explorer</em> reports.</li>
+<li>If you want to take the results of a computation that <em>Group Explorer</em>
+    has done and manipulate them further, you can do so right on the web,
+    by revealing the <em>GAP</em> code, editing it to extend it as needed, and
+    then clicking &ldquo;Run&rdquo; to see the results.</li>
+<li>If you think there is a mistake in <em>Group Explorer</em> and want to report
+    a bug to us, start by checking whether <em>Group Explorer</em> agrees with
+    <em>GAP.</em>  If it doesn&rsquo;t, definitely
+    <a href="https://github.com/nathancarter/group-explorer/issues">send us a bug report!</a></li>
+</ol>
+<p>The technology we use to include runnable <em>GAP</em> code in <em>Group Explorer</em> is
+the <a href="https://sagecell.sagemath.org"><em>Sage</em> Cell Server</a>.
+<a href="http://www.sagemath.org"><em>Sage</em></a> is a large piece of software for
+computational mathematics that tries to include as many mathematical tools
+as it can, including <em>GAP.</em>  The cell server makes all of Sage (including
+<em>GAP</em>) available for live use on the web.</p>
+<p>To go further with <em>Sage</em> or <em>GAP</em>, consider these options:</p>
+<ul>
+<li><a href="https://cocalc.com/app">CoCalc</a>,
+   a cloud service providing access to <em>Sage</em> (including <em>GAP</em>)</li>
+<li><a href="https://www.gap-system.org/Download/install.html">Instructions for installing <em>GAP</em></a>
+   on your own machine</li>
+<li><a href="https://doc.sagemath.org/html/en/installation/">Instructions for installing <em>Sage</em></a>
+   on your own machine</li>
+</ul>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Footer -->
+<footer class="w3-container w3-blue w3-padding-16">
+  <p>Based on a <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> template.
+  Thanks to them for sharing!</p>
+</footer>
+
+</body>
+</html>

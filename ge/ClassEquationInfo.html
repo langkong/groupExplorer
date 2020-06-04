@@ -1,0 +1,56 @@
+<html>
+   <head>
+      <title>Class Equation Info</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <link rel="icon" type="image/png" href="./images/favicon.png"></link>
+      <link rel="stylesheet" href="./style/fonts.css" type="text/css">
+
+      <style>
+       li {
+          margin-top: 0.2em;
+       }
+      </style>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+      <script type="text/x-mathjax-config">
+       MathJax.Hub.Config({
+      	  CommonHTML: {
+             scale: 90,
+          },
+       });
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_CHTML"></script>
+      <script src="./build/allGroupExplorer.js"></script>
+      <script src="./build/allSheets.js"></script>
+      <script src="./ClassEquationInfo.js"></script>
+   </head>
+
+   <body>
+      <template id="header">
+         <h3>${MathML.sans('<mtext>Results of &#8220;Class equation&#8221; computation for&nbsp;</mtext>' + group.name)}</h3>
+         <p>The <a href="./help/rf-groupterms/index.html#class-equation">class equation</a>
+            for ${MathML.sans(group.name)} is ${formatClassEquation(group)}.</p>
+      </template>
+      <template id="abelian">
+         <p>Each of the ${group.order} elements in the group is in a conjugacy class of its own,
+            because the group is abelian.</p>
+      </template>
+      <template id="non-abelian">
+         <p>The <a href="./help/rf-groupterms/index.html#conjugacy-classes">conjugacy classes</a>
+            used in the class equation are listed here:</p>
+         <ul id="conjugacy_list">
+         </ul>
+      </template>
+      <template id="trailer">
+         To see a visual representation of this class equation, click one of the following links:
+         <br>
+         Using
+         <a href="" class="show-class-equation-sheet" data-type="CDElement">Cayley diagrams</a>,
+         <a href="" class="show-class-equation-sheet" data-type="MTElement">multiplication tables</a>,
+         or <a href="" class="show-class-equation-sheet" data-type="CGElement">cycle graphs</a>.
+      </template>
+      <div class='gapcode' data-built-in-code-type='class equation'/>
+   </body>
+</html>

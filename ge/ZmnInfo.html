@@ -1,0 +1,63 @@
+<html>
+   <head>
+      <title>Zmn Info</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <link rel="icon" type="image/png" href="./images/favicon.png"></link>
+
+      <link rel="stylesheet" href="./style/fonts.css" type="text/css">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+      <script type="text/x-mathjax-config">
+       MathJax.Hub.Config({
+      	  CommonHTML: {
+             scale: 90,
+          },
+       });
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_CHTML"></script>
+      <script src="./build/allGroupExplorer.js"></script>
+      <script src="./build/allSheets.js"></script>
+      <script src="./ZmnInfo.js"></script>
+   </head>
+
+   <body>
+      <template id="header">
+         <h3>${MathML.sans('<mtext>Results of &#8220;</mtext>' + MathML.sub('&Zopf;', 'mn') + '<mtext>&nbsp;group&#8221; computation for&nbsp;</mtext>' + group.name)}</h3>
+      </template>
+      <template id="Z_mn-group">
+         <p>A group of the form ${MathML.sans('<msub><mi>&Zopf;</mi><mn>mn</mn></msub>')}
+            is isomorphic to the product group
+            ${MathML.sans('<msub><mi>&Zopf;</mi><mn>m</mn></msub><mo>&times;</mo><msub><mi>&Zopf;</mi><mn>n</mn></msub>')}
+            just when ${MathML.sans('<mi>m</mi>')} and ${MathML.sans('<mi>n</mi>')} are relatively prime.
+            In this case, because ${m} and ${n} are relatively prime,
+            ${MathML.sans('<msub><mi>&Zopf;</mi><mn>'+m+'</mn></msub><mo>&times;</mo><msub><mi>&Zopf;</mi><mn>'+n+'</mn></msub>')}
+            is isomorphic to ${MathML.sans('<msub><mi>&Zopf;</mi><mn>'+(m*n)+'</mn></msub>')}.</p>
+         <p><a href="" class="show-illustration" data-m="${m}" data-n="${n}">Click here</a> to see
+            an illustration of why ${statement( m, n, true )}.</p>
+      </template>
+      <template id="non-Z_mn-group-prime">
+         <p>A group of the form ${MathML.sans('<msub><mi>&Zopf;</mi><mn>mn</mn></msub>')}
+            is isomorphic to the product group
+            ${MathML.sans('<msub><mi>&Zopf;</mi><mn>m</mn></msub><mo>&times;</mo><msub><mi>&Zopf;</mi><mn>n</mn></msub>')}
+            just when ${MathML.sans('<mi>m</mi>')} and ${MathML.sans('<mi>n</mi>')} are relatively prime.
+            In this case, ${MathML.sans('<mi>mn</mi>')} = ${group.order}, which gives no possibilities for
+            ${MathML.sans('<mi>m</mi>')} and ${MathML.sans('<mi>n</mi>')}.</p>
+         <p>Thus there is not even a product group
+            ${MathML.sans('<msub><mi>&Zopf;</mi><mn>m</mn></msub><mo>&times;</mo><msub><mi>&Zopf;</mi><mn>n</mn></msub>')}
+            to speak of being isomorphic to.  (One of ${MathML.sans('<mi>m</mi>')} or ${MathML.sans('<mi>n</mi>')}
+            would need to be 1, making one factor the trivial group, the the other
+            ${MathML.sans('<msub><mi>&Zopf;</mi><mn>mn</mn></msub>')}.)</p>
+      </template>
+      <template id="non-Z_mn-group">
+         <p>A group of the form ${MathML.sans(MathML.sub('&Zopf;', 'mn'))} is isomorphic to the product group
+            ${MathML.sans('<msub><mi>&Zopf;</mi><mn>m</mn></msub><mo>&times;</mo><msub><mi>&Zopf;</mi><mn>n</mn></msub>')}
+            just when ${MathML.sans('<mi>m</mi>')} and ${MathML.sans('<mi>n</mi>')} are relatively prime.
+            In this case, the factors of ${MathML.sans('<mi>mn</mi>')} are ${facs}, which cannot be divided into
+            two non-trivial sets that do not both contain ${factors[0]}.  Thus, there cannot be two relatively prime
+            factors of ${MathML.sans('<mi>mn</mi>')} since any non-trivial factors must both be divisible by ${factors[0]}.</p>
+         <p>${allOffers(group.order)}</p>
+      </template>
+   </body>
+</html>

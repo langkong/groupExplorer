@@ -1,0 +1,105 @@
+sub, sup {
+   font-size: 70%;
+}
+.hidden {
+   display: none;
+}
+.highlighted {
+   background-color: #FFB886;		/* orange-tan (~light salmon) */
+}
+ul {
+   list-style-type: none;
+}
+#subset_page {
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+p.subset_page_header {
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 10px;
+   margin-top: 10px;
+   text-decoration: underline;
+}
+p.subset_page_header:hover,
+ul.subset_page_content > li:hover,
+p.placeholder:hover {
+   background-color: #FFFF00;		/* yellow */
+}
+
+ul.subset_page_content {
+   font-size: 12pt;
+   margin: 0;
+   margin-top: 0;
+   padding: 0;
+}
+
+#subset-elements {
+    background-color: #505050;
+   border: none;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	/* gray mist */
+   color: #ffffff;
+   padding: 0px 16px 16px 16px;
+}
+
+/* Subset editor styling */
+#subset_editor {
+   font-size: 12pt;
+   font-weight: bold;
+   text-align: center;
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgba(0,0,0,0.4); /* Gray mist */
+}
+
+#ssedit_content {
+   background-color: #ECECEC;		/* nearly white (~white smoke) */
+   margin: auto;
+   border: 1px solid #BFBFBF;		/* ~silver */
+   width: 500px;
+}
+
+#ssedit_title {
+   background: #D0D0D0;		/* light gray */
+   font-weight: lighter;
+}
+
+.ssedit_body {
+   height: 200px;
+   padding: 5px;
+}
+
+.ssedit_panel_container {
+   width: 50%;
+}
+
+.ssedit_panel {
+   height: 100%;
+   background-color: #FFFFFF;		/* white */
+   border: 1px solid #BFBFBF;		/* ~silver */
+   margin: 3px;
+   text-align: left;
+   font-weight: normal;
+   overflow: auto;
+}
+
+.ssedit_list {
+   margin-top: 0px;
+   padding-left: 0px;
+}
+
+.ssedit_button {
+   border: 1px solid #BFBFBF;		/* ~silver */
+   margin: 3px;
+   text-align: center;
+   font-size: inherit;
+   font-weight: inherit;
+}

@@ -1,0 +1,28 @@
+
+Postponed:
+
+## Group Explorer load performance thoughts (measure/compare?)
+ * Establish performance target
+ * Load group files
+     * Concatenate group files (download entire library at once)
+     * Load group files in web workers, pass XMLGroup(s) back to main thread
+ * Pre-calculate thumbnail png's as files
+     * Just Cayley diagrams?
+     * Concatenate png files and shred them on client?
+     * Download to web workers, pass back as data to main thread?
+ * Initially display MathML as HTML, then replace with MathJax output as it's rendered
+
+
+literate programming: nothing widely accepted for javascript (!?)
+  litpro -- extract code from .md file (into build directory)
+  maked -- converts .md into .html
+  vmd -- displays .md exactly as github would
+
+
+
+Abandoned:
+
+use web workers to improve performance:
+  web workers can't modify DOM
+  can't make .png without DOM <canvas> for context (and you need document to create <canvas>)
+  most of our time is spent rendering, there's not much work we can offload

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<title>Symmetry Object Options - Group Explorer 3.0 Help</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../w3.css">
+<link rel="stylesheet" href="../w3-theme-blue.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config( { TeX: { extensions: [ "color.js" ] } } );
+</script>
+<script>
+  // needed by the help scripts
+  var base_url = '..';
+</script>
+  <link href="../w3.css" rel="stylesheet">
+  <link href="../w3-theme-blue.css" rel="stylesheet">
+  <script src="../ge-citations.js" defer></script>
+  <script src="../search/main.js" defer></script>
+<style>
+img { border: 1px solid black; }
+</style>
+<body>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <!--<i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>-->
+  <div class="w3-center">
+  <h1 class="w3-xxxlarge">Group Explorer 3.0 Help: Symmetry Object Options</h1>
+  </div>
+</header>
+
+<hr>
+
+<div class="w3-container">
+    <div class="w3-row w3=border">
+        <div class="w3-quarter w3-container">
+            <div class="w3-padding w3-card w3-bar-block">
+                
+                <br>
+                <form action='search/index.html'>
+                    <input name='q' id='mkdocs-search-query' type='text'
+                           placeholder='Enter search term'
+                           title='Type search term here'/>
+                    <input type='submit' value='Search'
+                           class='w3-btn w3-theme'/>
+                </form>
+                <hr>
+                
+
+                <h3>Contents</h3>
+                <ul>
+                
+                    <li><a style="text-decoration: none;"
+                          href="#viewing-the-object">Viewing the object</a></li>
+                
+                    <li><a style="text-decoration: none;"
+                          href="#choosing-which-object-to-view">Choosing which object to view</a></li>
+                
+                    <li><a style="text-decoration: none;"
+                          href="#related-interfaces">Related interfaces</a></li>
+                
+                </ul>
+
+                <hr>
+
+                <h3><a style="text-decoration: none;"
+                      href="http://nathancarter.github.io/group-explorer">Group Explorer Home</a></h3>
+
+                <hr>
+
+                <h3>Other help pages</h3>
+                
+                    <ul>
+                    
+                    
+                        <li><a href=".."
+                               style="text-decoration: none;"
+                               class=""
+                               >Main Help Page</a></li>
+                    
+                    
+                    
+                        <li><a href="../welcome/"
+                               style="text-decoration: none;"
+                               class=""
+                               >Welcome</a></li>
+                    
+                    
+                    
+                        <li><a href="../gs-index/"
+                               style="text-decoration: none;"
+                               class=""
+                               >Getting Started</a></li>
+                    
+                    
+                    
+                    
+                    
+                        <li><a href="../tu-index/"
+                               style="text-decoration: none;"
+                               class=""
+                               >Tutorials</a></li>
+                    
+                    
+                    
+                    
+                    
+                        <li><a href="../rf-um-index/"
+                               style="text-decoration: none;"
+                               class=""
+                               >User Manual</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    </ul>
+                
+
+                <hr>
+
+                <h3>Have an idea?</h3>
+                <p><i class="fab fa-github"></i>
+                   <a href='http://github.com/nathancarter/group-explorer/edit/master/help-src/rf-um-os-options.md'
+                    >Edit this page</a></p>
+            </div>
+        </div>
+        <div class="w3-threequarter w3-container">
+            <p>This page documents the interface for the large view of an <a href="../rf-groupterms/#objects-of-symmetry">object of
+symmetry</a>. An object of symmetry is
+one of <em>Group Explorer&rsquo;s</em> four <a href="../rf-geterms/#visualizers">visualizers</a>, all
+of which can appear either in <a href="../rf-um-groupwindow/">group info pages</a>,
+<a href="../rf-geterms/#sheets">sheets</a>, or in their own pages. When they appear in
+their own pages, this is refered to as a &ldquo;large view,&rdquo; and you can read
+about it in general <a href="../rf-um-largewindow/">here</a>. This page covers the
+specifics for large views of objects of symmetry.</p>
+<p><img alt="A large view of an object of symmetry" src="../illustration-oswindow.png" /></p>
+<h2 id="viewing-the-object">Viewing the object</h2>
+<p>A symmetry object (unlike multiplication tables and cycle graphs) is a
+three-dimensional structure. Thus you can click and drag [one-finger drag]
+on the view to rotate it in three-dimensional space; you can right-click and
+drag [two-finger drag] to translate it; and you can use the mouse wheel [pinch 
+open/close] to zoom in and out. This lets you see all sides of the
+object, and seeing it in motion can give you a better mental picture of it.</p>
+<h2 id="choosing-which-object-to-view">Choosing which object to view</h2>
+<p>Some groups have more than one object of symmetry defined for them. For this
+reason, the topmost portion of the control pane on the right side of a large
+view for symmetry objecst allows you to choose which of the symmetry objects
+you wish to view. You choose from a list, as shown in the picture below.</p>
+<p><img alt="Screenshot of the control for choosing an object of symmetry" src="../illustration-osoptions.png" /></p>
+<p>In this illustration, the triangle is selected, but the user can click on it
+to open a list. Some groups only have one symmetry object on this list, but
+others have several. Choosing one changes the view immediately.</p>
+<h2 id="related-interfaces">Related interfaces</h2>
+<p>The remainder of the controls in the right side of the large window for
+symmetry objects are described in <a href="../rf-um-modelview/">the help page for three-dimensional
+controls</a>.</p>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Footer -->
+<footer class="w3-container w3-blue w3-padding-16">
+  <p>Based on a <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> template.
+  Thanks to them for sharing!</p>
+</footer>
+
+</body>
+</html>
